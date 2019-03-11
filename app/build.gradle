@@ -1,8 +1,7 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion "Google Inc.:Glass Development Kit Preview:19"
-    buildToolsVersion "20.0.0"
 
     defaultConfig {
         applicationId "com.jtxdriggers.android.glass.glasslauncher"
@@ -12,12 +11,12 @@ android {
 
     buildTypes {
         release {
-            runProguard false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
 }
 
 dependencies {
-    compile files('libs/frej.jar')
+    implementation files('libs/frej.jar')
 }
